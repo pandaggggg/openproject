@@ -1,4 +1,4 @@
-FROM node:14.16
+FROM node:14.19
 MAINTAINER operations@openproject.com
 
 ARG DEV_UID=1000
