@@ -32,9 +32,9 @@ ruby '~> 2.7.3'
 
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-import', '~> 1.0.2'
+gem 'activerecord-import', '~> 1.0.8'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 gem 'responders', '~> 3.0'
 
 gem 'rdoc', '>= 2.4.2'
@@ -50,10 +50,10 @@ gem 'warden-basic_auth', '~> 0.2.1'
 
 gem 'will_paginate', '~> 3.3.0'
 
-gem 'friendly_id', '~> 5.4.0'
+gem 'friendly_id', '~> 5.4.2'
 
-gem 'acts_as_list', '~> 1.0.1'
-gem 'acts_as_tree', '~> 2.9.0'
+gem 'acts_as_list', '~> 1.0.4'
+gem 'acts_as_tree', '~> 2.9.1'
 gem 'awesome_nested_set', '~> 3.4.0'
 gem 'rubytree', '~> 1.0.0'
 gem 'typed_dag', '~> 2.0.2'
@@ -61,7 +61,7 @@ gem 'typed_dag', '~> 2.0.2'
 gem 'addressable', '~> 2.7.0'
 
 # Remove whitespace from model input
-gem "auto_strip_attributes", "~> 2.5"
+gem "auto_strip_attributes", "~> 2.6", ">= 2.6.0"
 
 # Provide timezone info for TZInfo used by AR
 gem 'tzinfo-data', '~> 1.2021.1'
@@ -111,7 +111,7 @@ gem 'oj', '~> 3.11.0'
 
 gem 'daemons'
 gem 'delayed_cron_job', '~> 0.7.4'
-gem 'delayed_job_active_record', '~> 4.1.5'
+gem 'delayed_job_active_record', '~> 4.1.6'
 
 gem 'rack-protection', '~> 2.1.0'
 
@@ -205,7 +205,7 @@ group :test do
   # and other niceties
   gem 'test-prof', '~> 1.0.0'
 
-  gem 'database_cleaner', '~> 2.0'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
