@@ -30,22 +30,22 @@ source 'https://rubygems.org'
 
 ruby '~> 2.7.3'
 
-gem 'actionpack-xml_parser', '~> 2.0.0'
+gem 'actionpack-xml_parser', '~> 2.0.1'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-import', '~> 1.0.2'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
-gem 'responders', '~> 3.0'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
+gem 'responders', '~> 3.0', '>= 3.0.1'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.5.1'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
 gem 'request_store', '~> 1.5.0'
 
-gem 'warden', '~> 1.2'
+gem 'warden', '~> 1.2', '>= 1.2.9'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 gem 'will_paginate', '~> 3.3.0'
@@ -133,7 +133,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -192,13 +192,13 @@ gem 'mini_magick', '~> 4.11.0', require: false
 # Sentry error reporting, loaded on demand
 group :sentry do
   gem "sentry-ruby", '~> 4.3.1',  require: false
-  gem "sentry-rails", '~> 4.3.3', require: false
+  gem "sentry-rails", "~> 4.3.4", require: false
   gem "sentry-delayed_job", '~> 4.3.0', require: false
 end
 
 group :test do
   gem 'launchy', '~> 2.5.0'
-  gem 'rack-test', '~> 1.1.0'
+  gem 'rack-test', '~> 2.0.0'
   gem 'shoulda-context', '~> 2.0'
 
   # Test prof provides factories from code
@@ -209,7 +209,7 @@ group :test do
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 5.0.0', group: :development
+  gem 'rspec-rails', '~> 5.0.1', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -219,10 +219,10 @@ group :test do
   gem 'compare-xml', '~> 0.66', require: false
 
   # brings back testing for 'assigns' and 'assert_template' extracted in rails 5
-  gem 'rails-controller-testing', '~> 1.0.2'
+  gem 'rails-controller-testing', '~> 1.0.5'
 
-  gem 'capybara', '~> 3.35.0'
-  gem 'capybara-screenshot', '~> 1.0.17'
+  gem 'capybara', '~> 3.35.3'
+  gem 'capybara-screenshot', '~> 1.0.25'
   gem 'selenium-webdriver', '~> 3.14'
   gem 'webdrivers', '~> 4.6.0'
 
@@ -293,7 +293,7 @@ end
 gem 'bootsnap', '~> 1.7.0', require: false
 
 # API gems
-gem 'grape', '~> 1.5.0'
+gem 'grape', '~> 1.5.3'
 gem 'roar', '~> 1.1.0'
 
 # CORS for API
