@@ -30,38 +30,38 @@ source 'https://rubygems.org'
 
 ruby '~> 2.7.3'
 
-gem 'actionpack-xml_parser', '~> 2.0.0'
-gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-import', '~> 1.0.2'
+gem 'actionpack-xml_parser', '~> 2.0.1'
+gem 'activemodel-serializers-xml', '~> 1.0.2'
+gem 'activerecord-import', '~> 1.0.8'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
-gem 'responders', '~> 3.0'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
+gem 'responders', '~> 3.0', '>= 3.0.1'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.5.1'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
 gem 'request_store', '~> 1.5.0'
 
-gem 'warden', '~> 1.2'
+gem 'warden', '~> 1.2', '>= 1.2.9'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 gem 'will_paginate', '~> 3.3.0'
 
-gem 'friendly_id', '~> 5.4.0'
+gem 'friendly_id', '~> 5.4.2'
 
-gem 'acts_as_list', '~> 1.0.1'
-gem 'acts_as_tree', '~> 2.9.0'
+gem 'acts_as_list', '~> 1.0.4'
+gem 'acts_as_tree', '~> 2.9.1'
 gem 'awesome_nested_set', '~> 3.4.0'
 gem 'rubytree', '~> 1.0.0'
 gem 'typed_dag', '~> 2.0.2'
 
-gem 'addressable', '~> 2.7.0'
+gem 'addressable', '~> 2.8.0'
 
 # Remove whitespace from model input
-gem "auto_strip_attributes", "~> 2.5"
+gem "auto_strip_attributes", "~> 2.6", ">= 2.6.0"
 
 # Provide timezone info for TZInfo used by AR
 gem 'tzinfo-data', '~> 1.2021.1'
@@ -73,19 +73,19 @@ gem 'htmldiff'
 gem 'stringex', '~> 2.8.5'
 
 # CommonMark markdown parser with GFM extension
-gem 'commonmarker', '~> 0.21.0'
+gem 'commonmarker', '~> 0.23.7'
 
 # HTML pipeline for transformations on text formatter output
 # such as sanitization or additional features
 gem 'html-pipeline', '~> 2.14.0'
 # Tasklist parsing and renderer
-gem 'deckar01-task_list', '~> 2.3.1'
+gem 'deckar01-task_list', '~> 2.3.2'
 # Requires escape-utils for faster escaping
 gem 'escape_utils', '~> 1.0'
 # Syntax highlighting used in html-pipeline with rouge
 gem 'rouge', '~> 3.26.0'
 # HTML sanitization used for html-pipeline
-gem 'sanitize', '~> 5.2.1'
+gem 'sanitize', '~> 6.0.1'
 # HTML autolinking for mails and urls (replaces autolink)
 gem 'rinku', '~> 2.0.4'
 # Version parsing with semver
@@ -96,7 +96,7 @@ gem 'semantic', '~> 1.6.1'
 gem 'svg-graph', '~> 2.2.0'
 
 gem 'date_validator', '~> 0.10.0'
-gem 'ruby-duration', '~> 3.2.0'
+gem 'ruby-duration', '~> 3.2.3'
 
 # provide compatible filesystem information for available storage
 gem 'sys-filesystem', '~> 1.4.0', require: false
@@ -111,7 +111,7 @@ gem 'oj', '~> 3.11.0'
 
 gem 'daemons'
 gem 'delayed_cron_job', '~> 0.7.4'
-gem 'delayed_job_active_record', '~> 4.1.5'
+gem 'delayed_job_active_record', '~> 4.1.6'
 
 gem 'rack-protection', '~> 2.1.0'
 
@@ -133,7 +133,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -143,7 +143,7 @@ gem 'structured_warnings', '~> 0.4.0'
 gem 'airbrake', '~> 11.0.0', require: false
 
 gem 'prawn', '~> 2.2'
-gem 'prawn-markup', '~> 0.3.0'
+gem 'prawn-markup', '~> 0.3.2'
 
 gem 'cells-erb', '~> 0.1.0'
 gem 'cells-rails', '~> 0.0.9'
@@ -153,7 +153,7 @@ gem 'meta-tags', '~> 2.14.0'
 group :production do
   # we use dalli as standard memcache client
   # requires memcached 1.4+
-  gem 'dalli', '~> 2.7.10'
+  gem 'dalli', '~> 3.2.3'
 
   # Unicorn worker killer to restart unicorn child workers
   gem 'unicorn-worker-killer', require: false
@@ -161,27 +161,27 @@ end
 
 gem 'i18n-js', '~> 3.8.0'
 gem 'rails-i18n', '~> 6.0.0'
-gem 'sprockets', '~> 3.7.0'
+gem 'sprockets', '~> 4.2.0'
 
 # required by Procfile, for deployment on heroku or packaging with packager.io.
 # also, better than thin since we can control worker concurrency.
 gem 'unicorn'
 
-gem 'puma', '~> 5.2.0' # used for development and optionally for production
+gem 'puma', '~> 5.6.4' # used for development and optionally for production
 
-gem 'nokogiri', '~> 1.11.0'
+gem 'nokogiri', '~> 1.13.9'
 
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 1.3.2'
 gem 'carrierwave_direct', '~> 2.1.0'
 gem 'fog-aws'
 
-gem 'aws-sdk-core', '~> 3.107'
+gem 'aws-sdk-core', '~> 3.114', '>= 3.114.0'
 # File upload via fog + screenshots on travis
-gem 'aws-sdk-s3', '~> 1.91'
+gem 'aws-sdk-s3', '~> 1.94', '>= 1.94.0'
 
-gem 'openproject-token', '~> 2.1.1'
+gem 'openproject-token', '~> 2.1.3'
 
-gem 'plaintext', '~> 0.3.2'
+gem 'plaintext', '~> 0.3.4'
 
 gem 'rest-client', '~> 2.0'
 
@@ -192,24 +192,24 @@ gem 'mini_magick', '~> 4.11.0', require: false
 # Sentry error reporting, loaded on demand
 group :sentry do
   gem "sentry-ruby", '~> 4.3.1',  require: false
-  gem "sentry-rails", '~> 4.3.3', require: false
+  gem "sentry-rails", "~> 4.3.4", require: false
   gem "sentry-delayed_job", '~> 4.3.0', require: false
 end
 
 group :test do
   gem 'launchy', '~> 2.5.0'
-  gem 'rack-test', '~> 1.1.0'
+  gem 'rack-test', '~> 2.0.0'
   gem 'shoulda-context', '~> 2.0'
 
   # Test prof provides factories from code
   # and other niceties
   gem 'test-prof', '~> 1.0.0'
 
-  gem 'database_cleaner', '~> 2.0'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 5.0.0', group: :development
+  gem 'rspec-rails', '~> 5.0.1', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -219,10 +219,10 @@ group :test do
   gem 'compare-xml', '~> 0.66', require: false
 
   # brings back testing for 'assigns' and 'assert_template' extracted in rails 5
-  gem 'rails-controller-testing', '~> 1.0.2'
+  gem 'rails-controller-testing', '~> 1.0.5'
 
-  gem 'capybara', '~> 3.35.0'
-  gem 'capybara-screenshot', '~> 1.0.17'
+  gem 'capybara', '~> 3.35.3'
+  gem 'capybara-screenshot', '~> 1.0.25'
   gem 'selenium-webdriver', '~> 3.14'
   gem 'webdrivers', '~> 4.6.0'
 
@@ -230,15 +230,15 @@ group :test do
   gem 'timecop', '~> 0.9.0'
 
   # Mock backend requests (for ruby tests)
-  gem 'webmock', '~> 3.12', require: false
+  gem 'webmock', '~> 3.12', '>= 3.12.2', require: false
 
   # Mock selenium requests through proxy (for feature tests)
-  gem 'puffing-billy', '~> 2.4.0'
+  gem 'puffing-billy', '~> 2.4.1'
   gem 'table_print', '~> 1.5.6'
 
-  gem 'equivalent-xml', '~> 0.6'
+  gem 'equivalent-xml', '~> 0.6', '>= 0.6.0'
   gem 'json_spec', '~> 1.1.4'
-  gem 'shoulda-matchers', '~> 4.5', require: nil
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1', require: nil
 
   gem 'parallel_tests', '~> 3.1'
 end
@@ -283,7 +283,7 @@ group :development, :test do
   gem 'pry-stack_explorer', '~> 0.6.0'
 
   # Dangerfile scanner on travis and locally
-  gem 'danger', '~> 8.2.0'
+  gem 'danger', '~> 8.2.3'
 
   # Brakeman scanner
   gem 'brakeman', '~> 5.0.0'
@@ -293,7 +293,7 @@ end
 gem 'bootsnap', '~> 1.7.0', require: false
 
 # API gems
-gem 'grape', '~> 1.5.0'
+gem 'grape', '~> 1.5.3'
 gem 'roar', '~> 1.1.0'
 
 # CORS for API
