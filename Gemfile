@@ -34,12 +34,12 @@ gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-import', '~> 1.0.2'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
-gem 'responders', '~> 3.0'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.5.2'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
@@ -133,7 +133,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.12.0'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -146,9 +146,9 @@ gem 'prawn', '~> 2.2'
 gem 'prawn-markup', '~> 0.3.0'
 
 gem 'cells-erb', '~> 0.1.0'
-gem 'cells-rails', '~> 0.0.9'
+gem 'cells-rails', '~> 0.1.0'
 
-gem 'meta-tags', '~> 2.14.0'
+gem 'meta-tags', '~> 2.15.0'
 
 group :production do
   # we use dalli as standard memcache client
@@ -160,7 +160,7 @@ group :production do
 end
 
 gem 'i18n-js', '~> 3.8.0'
-gem 'rails-i18n', '~> 6.0.0'
+gem 'rails-i18n', '~> 7.0.1'
 gem 'sprockets', '~> 3.7.0'
 
 # required by Procfile, for deployment on heroku or packaging with packager.io.
@@ -192,7 +192,7 @@ gem 'mini_magick', '~> 4.11.0', require: false
 # Sentry error reporting, loaded on demand
 group :sentry do
   gem "sentry-ruby", '~> 4.3.1',  require: false
-  gem "sentry-rails", '~> 4.3.3', require: false
+  gem "sentry-rails", "~> 4.4.0", require: false
   gem "sentry-delayed_job", '~> 4.3.0', require: false
 end
 
@@ -209,7 +209,7 @@ group :test do
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 5.0.0', group: :development
+  gem 'rspec-rails', '~> 5.0.2', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -269,7 +269,7 @@ group :development, :test do
   # Require factory_bot for usage with openproject plugins testing
   gem 'factory_bot', '~> 6.1.0'
   # require factory_bot_rails for convenience in core development
-  gem 'factory_bot_rails', '~> 6.1.0'
+  gem 'factory_bot_rails', '~> 6.2.0'
 
   # Tracing and profiling gems
   gem 'flamegraph', require: false
