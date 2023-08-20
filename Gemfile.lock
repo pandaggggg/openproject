@@ -8,24 +8,6 @@ GIT
       rack (>= 1.6.2, < 3)
 
 GIT
-  remote: https://github.com/opf/omniauth-openid-connect.git
-  revision: e1173e682a60010c018146443453560a13b01a90
-  ref: e1173e682a60010c018146443453560a13b01a90
-  specs:
-    omniauth-openid-connect (0.4.0)
-      addressable (~> 2.5)
-      omniauth (~> 1.6)
-      openid_connect (~> 1.1.6)
-
-GIT
-  remote: https://github.com/opf/omniauth-openid_connect-providers.git
-  revision: a6c0c3ed78fac79cf4d007e40d4029e524ec7751
-  ref: a6c0c3ed78fac79cf4d007e40d4029e524ec7751
-  specs:
-    omniauth-openid_connect-providers (0.2.0)
-      omniauth-openid-connect (>= 0.2.1)
-
-GIT
   remote: https://github.com/opf/openproject-translations.git
   revision: ec6fbe6ef86f82e65f37adb17f37aa5addc17ac4
   branch: dev
@@ -35,154 +17,9 @@ GIT
       mixlib-shellout (~> 2.1.0)
       rubyzip
 
-PATH
-  remote: modules/auth_plugins
-  specs:
-    openproject-auth_plugins (1.0.0)
-      omniauth (~> 1.0)
-
-PATH
-  remote: modules/auth_saml
-  specs:
-    openproject-auth_saml (1.0.0)
-      omniauth-saml (~> 1.10.1)
-
-PATH
-  remote: modules/avatars
-  specs:
-    openproject-avatars (1.0.0)
-      fastimage (~> 2.2.0)
-      gravatar_image_tag (~> 1.2.0)
-
-PATH
-  remote: modules/backlogs
-  specs:
-    openproject-backlogs (1.0.0)
-      acts_as_list (~> 1.0.1)
-      openproject-pdf_export
-
-PATH
-  remote: modules/bim
-  specs:
-    openproject-bim (1.0.0)
-      activerecord-import
-      rubyzip (~> 1.2)
-
-PATH
-  remote: modules/boards
-  specs:
-    openproject-boards (1.0.0)
-
-PATH
-  remote: modules/budgets
-  specs:
-    budgets (1.0.0)
-
-PATH
-  remote: modules/costs
-  specs:
-    costs (1.0.0)
-
-PATH
-  remote: modules/dashboards
-  specs:
-    dashboards (1.0.0)
-      grids
-
-PATH
-  remote: modules/documents
-  specs:
-    openproject-documents (1.0.0)
-
-PATH
-  remote: modules/github_integration
-  specs:
-    openproject-github_integration (1.0.0)
-      openproject-webhooks
-
-PATH
-  remote: modules/grids
-  specs:
-    grids (1.0.0)
-
-PATH
-  remote: modules/job_status
-  specs:
-    openproject-job_status (1.0.0)
-
-PATH
-  remote: modules/ldap_groups
-  specs:
-    openproject-ldap_groups (1.0.0)
-
-PATH
-  remote: modules/meeting
-  specs:
-    openproject-meeting (1.0.0)
-      icalendar (~> 2.7.0)
-
-PATH
-  remote: modules/my_page
-  specs:
-    my_page (1.0.0)
-      grids
-
-PATH
-  remote: modules/openid_connect
-  specs:
-    openproject-openid_connect (1.0.0)
-      lobby_boy (~> 0.1.3)
-      omniauth-openid_connect-providers (~> 0.1)
-      openproject-auth_plugins
-
-PATH
-  remote: modules/overviews
-  specs:
-    overviews (1.0.0)
-      grids
-
-PATH
-  remote: modules/pdf_export
-  specs:
-    openproject-pdf_export (1.0.0)
-      pdf-inspector (~> 1.3.0)
-      prawn (~> 2.2)
-
-PATH
-  remote: modules/recaptcha
-  specs:
-    openproject-recaptcha (1.0.0)
-      recaptcha (~> 5.7)
-
-PATH
-  remote: modules/reporting
-  specs:
-    openproject-reporting (1.0.0)
-      costs
-
-PATH
-  remote: modules/two_factor_authentication
-  specs:
-    openproject-two_factor_authentication (1.0.0)
-      aws-sdk-sns (~> 1.40.0)
-      messagebird-rest (~> 1.4.2)
-      rotp (~> 6.1)
-
-PATH
-  remote: modules/webhooks
-  specs:
-    openproject-webhooks (1.0.0)
-
-PATH
-  remote: modules/xls_export
-  specs:
-    openproject-xls_export (1.0.0)
-      spreadsheet (~> 1.2.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    Ascii85 (1.1.0)
     actioncable (6.1.3.1)
       actionpack (= 6.1.3.1)
       activesupport (= 6.1.3.1)
@@ -265,14 +102,11 @@ GEM
       activerecord (>= 3.0.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    aes_key_wrap (1.1.0)
-    afm (0.2.2)
     airbrake (11.0.1)
       airbrake-ruby (~> 5.1)
     airbrake-ruby (5.2.0)
       rbtree3 (~> 0.5)
     ast (2.4.2)
-    attr_required (1.0.1)
     auto_strip_attributes (2.6.0)
       activerecord (>= 4.0)
     awesome_nested_set (3.4.0)
@@ -291,13 +125,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.112.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sns (1.40.0)
-      aws-sdk-core (~> 3, >= 3.112.0)
-      aws-sigv4 (~> 1.1)
     aws-sigv4 (1.2.3)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
-    bindata (2.4.9)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
     bootsnap (1.7.4)
@@ -466,7 +296,6 @@ GEM
       faraday (>= 0.8)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
-    fastimage (2.2.3)
     ffi (1.15.0)
     flamegraph (0.9.5)
     fog-aws (3.10.0)
@@ -509,9 +338,7 @@ GEM
       mustermann-grape (~> 1.0.0)
       rack (>= 1.3.0)
       rack-accept
-    gravatar_image_tag (1.2.0)
     hashdiff (1.0.1)
-    hashery (2.1.2)
     hashie (3.6.0)
     html-pipeline (2.14.0)
       activesupport (>= 2)
@@ -521,23 +348,15 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
-    httpclient (2.8.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     i18n-js (3.8.2)
       i18n (>= 0.6.6)
-    icalendar (2.7.1)
-      ice_cube (~> 0.16)
-    ice_cube (0.16.3)
     interception (0.5)
     ipaddress (0.8.3)
     iso8601 (0.13.0)
     jmespath (1.4.0)
     json (2.5.1)
-    json-jwt (1.13.0)
-      activesupport (>= 4.2)
-      aes_key_wrap
-      bindata
     json_spec (1.1.5)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
@@ -546,8 +365,6 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    ladle (1.0.1)
-      open4 (~> 1.0)
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.7.0)
@@ -561,10 +378,6 @@ GEM
       sassc
       thor
       tilt
-    lobby_boy (0.1.3)
-      omniauth (~> 1.1)
-      omniauth-openid-connect (>= 0.2.1)
-      rails (>= 3.2.21)
     lograge (0.11.2)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -576,7 +389,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
-    messagebird-rest (1.4.2)
     meta-tags (2.14.0)
       actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
@@ -600,7 +412,7 @@ GEM
     net-ldap (0.17.0)
     netrc (0.11.0)
     newrelic_rpm (7.0.0)
-    nio4r (2.5.7)
+    nio4r (2.5.9)
     no_proxy_fix (0.1.2)
     nokogiri (1.11.3)
       mini_portile2 (~> 2.5.0)
@@ -612,20 +424,7 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     oj (3.11.5)
     okcomputer (1.18.4)
-    omniauth-saml (1.10.3)
-      omniauth (~> 1.3, >= 1.3.2)
-      ruby-saml (~> 1.9)
     open4 (1.3.4)
-    openid_connect (1.1.8)
-      activemodel
-      attr_required (>= 1.0.0)
-      json-jwt (>= 1.5.0)
-      rack-oauth2 (>= 1.6.1)
-      swd (>= 1.0.0)
-      tzinfo
-      validate_email
-      validate_url
-      webfinger (>= 1.0.1)
     openproject-token (2.1.3)
       activemodel
     parallel (1.20.1)
@@ -634,14 +433,6 @@ GEM
     parser (3.0.1.1)
       ast (~> 2.4.1)
     pdf-core (0.9.0)
-    pdf-inspector (1.3.0)
-      pdf-reader (>= 1.0, < 3.0.a)
-    pdf-reader (2.4.2)
-      Ascii85 (~> 1.0)
-      afm (~> 0.2.1)
-      hashery (~> 2.0)
-      ruby-rc4
-      ttfunk
     pg (1.2.3)
     plaintext (0.3.4)
       activesupport (> 2.2.1)
@@ -680,7 +471,7 @@ GEM
       eventmachine_httpserver
       http_parser.rb (~> 0.6.0)
       multi_json
-    puma (5.2.2)
+    puma (5.6.7)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -692,12 +483,6 @@ GEM
       rack (>= 2.0.0)
     rack-mini-profiler (2.3.2)
       rack (>= 1.2.0)
-    rack-oauth2 (1.16.0)
-      activesupport
-      attr_required
-      httpclient
-      json-jwt (>= 1.11.0)
-      rack (>= 2.1.0)
     rack-protection (2.1.0)
       rack
     rack-test (1.1.0)
@@ -747,8 +532,6 @@ GEM
     rbtree3 (0.6.0)
     rchardet (1.8.0)
     rdoc (6.3.1)
-    recaptcha (5.7.0)
-      json
     redcarpet (3.5.1)
     regexp_parser (2.1.1)
     representable (3.0.4)
@@ -770,7 +553,6 @@ GEM
     rinku (2.0.6)
     roar (1.1.0)
       representable (~> 3.0.0)
-    rotp (6.2.0)
     rouge (3.26.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -819,13 +601,8 @@ GEM
       iso8601
     ruby-enum (0.9.0)
       i18n
-    ruby-ole (1.2.12.2)
     ruby-prof (1.4.3)
     ruby-progressbar (1.11.0)
-    ruby-rc4 (0.1.5)
-    ruby-saml (1.12.2)
-      nokogiri (>= 1.10.5)
-      rexml
     ruby2_keywords (0.0.4)
     rubytree (1.0.0)
       json (~> 2.1)
@@ -866,8 +643,6 @@ GEM
     shoulda-context (2.0.0)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
-    spreadsheet (1.2.8)
-      ruby-ole
     spring (2.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -883,10 +658,6 @@ GEM
     stringex (2.8.5)
     structured_warnings (0.4.0)
     svg-graph (2.2.1)
-    swd (1.2.0)
-      activesupport (>= 3)
-      attr_required (>= 0.0.5)
-      httpclient (>= 2.4)
     sys-filesystem (1.4.1)
       ffi (~> 1.1)
     table_print (1.5.7)
@@ -914,12 +685,6 @@ GEM
     unicorn-worker-killer (0.4.5)
       get_process_mem (~> 0)
       unicorn (>= 4, < 7)
-    validate_email (0.1.6)
-      activemodel (>= 3.0)
-      mail (>= 2.2.5)
-    validate_url (1.0.13)
-      activemodel (>= 3.0.0)
-      public_suffix
     warden (1.2.9)
       rack (>= 2.0.9)
     warden-basic_auth (0.2.1)
@@ -928,9 +693,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
-    webfinger (1.1.0)
-      activesupport
-      httpclient (>= 2.4)
     webmock (3.12.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -966,7 +728,6 @@ DEPENDENCIES
   bootsnap (~> 1.7.0)
   brakeman (~> 5.0.0)
   browser (~> 5.3.0)
-  budgets!
   capybara (~> 3.35.0)
   capybara-screenshot (~> 1.0.17)
   carrierwave (~> 1.3.1)
@@ -975,12 +736,10 @@ DEPENDENCIES
   cells-rails (~> 0.0.9)
   commonmarker (~> 0.21.0)
   compare-xml (~> 0.66)
-  costs!
   daemons
   dalli (~> 2.7.10)
   danger (~> 8.2.0)
   danger-brakeman
-  dashboards!
   database_cleaner (~> 2.0)
   date_validator (~> 0.10.0)
   deckar01-task_list (~> 2.3.1)
@@ -999,12 +758,10 @@ DEPENDENCIES
   fuubar (~> 2.5.0)
   gon (~> 6.4.0)
   grape (~> 1.5.0)
-  grids!
   html-pipeline (~> 2.14.0)
   htmldiff
   i18n-js (~> 3.8.0)
   json_spec (~> 1.1.4)
-  ladle
   launchy (~> 2.5.0)
   letter_opener
   listen (~> 3.5.1)
@@ -1013,37 +770,14 @@ DEPENDENCIES
   meta-tags (~> 2.14.0)
   mini_magick (~> 4.11.0)
   multi_json (~> 1.15.0)
-  my_page!
   net-ldap (~> 0.17.0)
   newrelic_rpm
   nokogiri (~> 1.11.0)
   oj (~> 3.11.0)
   okcomputer (~> 1.18.1)
   omniauth!
-  omniauth-openid-connect!
-  omniauth-openid_connect-providers!
-  omniauth-saml (~> 1.10.1)
-  openproject-auth_plugins!
-  openproject-auth_saml!
-  openproject-avatars!
-  openproject-backlogs!
-  openproject-bim!
-  openproject-boards!
-  openproject-documents!
-  openproject-github_integration!
-  openproject-job_status!
-  openproject-ldap_groups!
-  openproject-meeting!
-  openproject-openid_connect!
-  openproject-pdf_export!
-  openproject-recaptcha!
-  openproject-reporting!
   openproject-token (~> 2.1.1)
   openproject-translations!
-  openproject-two_factor_authentication!
-  openproject-webhooks!
-  openproject-xls_export!
-  overviews!
   parallel_tests (~> 3.1)
   pg (~> 1.2.2)
   plaintext (~> 0.3.2)
@@ -1055,7 +789,7 @@ DEPENDENCIES
   pry-rescue (~> 1.5.2)
   pry-stack_explorer (~> 0.6.0)
   puffing-billy (~> 2.4.0)
-  puma (~> 5.2.0)
+  puma (~> 5.6.7)
   rack-attack (~> 6.5.0)
   rack-cors (~> 1.1.1)
   rack-mini-profiler
