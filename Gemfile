@@ -32,14 +32,14 @@ ruby '~> 2.7.3'
 
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-import', '~> 1.0.2'
+gem 'activerecord-import', '~> 1.1.0'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
-gem 'responders', '~> 3.0'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.5'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.5.2'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
@@ -50,11 +50,11 @@ gem 'warden-basic_auth', '~> 0.2.1'
 
 gem 'will_paginate', '~> 3.3.0'
 
-gem 'friendly_id', '~> 5.4.0'
+gem 'friendly_id', '~> 5.5.0'
 
-gem 'acts_as_list', '~> 1.0.1'
+gem 'acts_as_list', '~> 1.1.0'
 gem 'acts_as_tree', '~> 2.9.0'
-gem 'awesome_nested_set', '~> 3.4.0'
+gem 'awesome_nested_set', '~> 3.5.0'
 gem 'rubytree', '~> 1.0.0'
 gem 'typed_dag', '~> 2.0.2'
 
@@ -77,7 +77,7 @@ gem 'commonmarker', '~> 0.21.0'
 
 # HTML pipeline for transformations on text formatter output
 # such as sanitization or additional features
-gem 'html-pipeline', '~> 2.14.0'
+gem 'html-pipeline', '~> 2.14.1'
 # Tasklist parsing and renderer
 gem 'deckar01-task_list', '~> 2.3.1'
 # Requires escape-utils for faster escaping
@@ -95,7 +95,7 @@ gem 'semantic', '~> 1.6.1'
 # used for statistics on svn repositories
 gem 'svg-graph', '~> 2.2.0'
 
-gem 'date_validator', '~> 0.10.0'
+gem 'date_validator', '~> 0.11.0'
 gem 'ruby-duration', '~> 3.2.0'
 
 # provide compatible filesystem information for available storage
@@ -110,8 +110,8 @@ gem 'multi_json', '~> 1.15.0'
 gem 'oj', '~> 3.11.0'
 
 gem 'daemons'
-gem 'delayed_cron_job', '~> 0.7.4'
-gem 'delayed_job_active_record', '~> 4.1.5'
+gem 'delayed_cron_job', '~> 0.8.0'
+gem 'delayed_job_active_record', '~> 4.1.7'
 
 gem 'rack-protection', '~> 2.1.0'
 
@@ -133,7 +133,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.12.0'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -146,9 +146,9 @@ gem 'prawn', '~> 2.2'
 gem 'prawn-markup', '~> 0.3.0'
 
 gem 'cells-erb', '~> 0.1.0'
-gem 'cells-rails', '~> 0.0.9'
+gem 'cells-rails', '~> 0.1.0'
 
-gem 'meta-tags', '~> 2.14.0'
+gem 'meta-tags', '~> 2.15.0'
 
 group :production do
   # we use dalli as standard memcache client
@@ -160,7 +160,7 @@ group :production do
 end
 
 gem 'i18n-js', '~> 3.8.0'
-gem 'rails-i18n', '~> 6.0.0'
+gem 'rails-i18n', '~> 7.0.1'
 gem 'sprockets', '~> 3.7.0'
 
 # required by Procfile, for deployment on heroku or packaging with packager.io.
@@ -171,15 +171,15 @@ gem 'puma', '~> 5.2.0' # used for development and optionally for production
 
 gem 'nokogiri', '~> 1.11.0'
 
-gem 'carrierwave', '~> 1.3.1'
-gem 'carrierwave_direct', '~> 2.1.0'
+gem 'carrierwave', '~> 1.3.3'
+gem 'carrierwave_direct', '~> 3.0.0'
 gem 'fog-aws'
 
 gem 'aws-sdk-core', '~> 3.107'
 # File upload via fog + screenshots on travis
 gem 'aws-sdk-s3', '~> 1.91'
 
-gem 'openproject-token', '~> 2.1.1'
+gem 'openproject-token', '~> 2.2.0'
 
 gem 'plaintext', '~> 0.3.2'
 
@@ -192,7 +192,7 @@ gem 'mini_magick', '~> 4.11.0', require: false
 # Sentry error reporting, loaded on demand
 group :sentry do
   gem "sentry-ruby", '~> 4.3.1',  require: false
-  gem "sentry-rails", '~> 4.3.3', require: false
+  gem "sentry-rails", "~> 4.4.0", require: false
   gem "sentry-delayed_job", '~> 4.3.0', require: false
 end
 
@@ -205,11 +205,11 @@ group :test do
   # and other niceties
   gem 'test-prof', '~> 1.0.0'
 
-  gem 'database_cleaner', '~> 2.0'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 5.0.0', group: :development
+  gem 'rspec-rails', '~> 5.0.2', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -238,7 +238,7 @@ group :test do
 
   gem 'equivalent-xml', '~> 0.6'
   gem 'json_spec', '~> 1.1.4'
-  gem 'shoulda-matchers', '~> 4.5', require: nil
+  gem 'shoulda-matchers', '~> 5.0', '>= 5.0.0', require: nil
 
   gem 'parallel_tests', '~> 3.1'
 end
@@ -257,7 +257,7 @@ group :development do
   gem 'spring-commands-rspec'
 
   gem 'rubocop'
-  gem 'rubocop-rails'
+  gem 'rubocop-rails', '>= 2.10.0'
   gem 'rubocop-rspec'
 
   # Gems for living styleguide
@@ -267,9 +267,9 @@ end
 
 group :development, :test do
   # Require factory_bot for usage with openproject plugins testing
-  gem 'factory_bot', '~> 6.1.0'
+  gem 'factory_bot', '~> 6.2.0'
   # require factory_bot_rails for convenience in core development
-  gem 'factory_bot_rails', '~> 6.1.0'
+  gem 'factory_bot_rails', '~> 6.2.0'
 
   # Tracing and profiling gems
   gem 'flamegraph', require: false
@@ -293,7 +293,7 @@ end
 gem 'bootsnap', '~> 1.7.0', require: false
 
 # API gems
-gem 'grape', '~> 1.5.0'
+gem 'grape', '~> 1.6.0'
 gem 'roar', '~> 1.1.0'
 
 # CORS for API
@@ -308,7 +308,7 @@ platforms :mri, :mingw, :x64_mingw do
   end
 
   # Support application loading when no database exists yet.
-  gem 'activerecord-nulldb-adapter', '~> 0.7.0'
+  gem 'activerecord-nulldb-adapter', '~> 0.8.0'
 
   # Have application level locks on the database to have a mutex shared between workers/hosts.
   # We e.g. employ this to safeguard the creation of journals.
