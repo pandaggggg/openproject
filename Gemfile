@@ -33,13 +33,13 @@ ruby '~> 2.7.3'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-import', '~> 1.0.2'
-gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 6.1.3'
-gem 'responders', '~> 3.0'
+gem 'activerecord-session_store', '~> 2.1.0'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.5.2'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
@@ -77,15 +77,15 @@ gem 'commonmarker', '~> 0.21.0'
 
 # HTML pipeline for transformations on text formatter output
 # such as sanitization or additional features
-gem 'html-pipeline', '~> 2.14.0'
+gem 'html-pipeline', '~> 2.14.1'
 # Tasklist parsing and renderer
-gem 'deckar01-task_list', '~> 2.3.1'
+gem 'deckar01-task_list', '~> 2.3.3'
 # Requires escape-utils for faster escaping
 gem 'escape_utils', '~> 1.0'
 # Syntax highlighting used in html-pipeline with rouge
 gem 'rouge', '~> 3.26.0'
 # HTML sanitization used for html-pipeline
-gem 'sanitize', '~> 5.2.1'
+gem 'sanitize', '~> 6.0.0'
 # HTML autolinking for mails and urls (replaces autolink)
 gem 'rinku', '~> 2.0.4'
 # Version parsing with semver
@@ -133,7 +133,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.12.0'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -143,12 +143,12 @@ gem 'structured_warnings', '~> 0.4.0'
 gem 'airbrake', '~> 11.0.0', require: false
 
 gem 'prawn', '~> 2.2'
-gem 'prawn-markup', '~> 0.3.0'
+gem 'prawn-markup', '~> 0.3.3'
 
 gem 'cells-erb', '~> 0.1.0'
-gem 'cells-rails', '~> 0.0.9'
+gem 'cells-rails', '~> 0.1.0'
 
-gem 'meta-tags', '~> 2.14.0'
+gem 'meta-tags', '~> 2.15.0'
 
 group :production do
   # we use dalli as standard memcache client
@@ -160,7 +160,7 @@ group :production do
 end
 
 gem 'i18n-js', '~> 3.8.0'
-gem 'rails-i18n', '~> 6.0.0'
+gem 'rails-i18n', '~> 7.0.1'
 gem 'sprockets', '~> 3.7.0'
 
 # required by Procfile, for deployment on heroku or packaging with packager.io.
@@ -169,11 +169,11 @@ gem 'unicorn'
 
 gem 'puma', '~> 5.2.0' # used for development and optionally for production
 
-gem 'nokogiri', '~> 1.11.0'
+gem 'nokogiri', '~> 1.11.4'
 
 gem 'carrierwave', '~> 1.3.1'
-gem 'carrierwave_direct', '~> 2.1.0'
-gem 'fog-aws'
+gem 'carrierwave_direct', '~> 3.0.0'
+gem 'fog-aws', '>= 3.11.0'
 
 gem 'aws-sdk-core', '~> 3.107'
 # File upload via fog + screenshots on travis
@@ -192,7 +192,7 @@ gem 'mini_magick', '~> 4.11.0', require: false
 # Sentry error reporting, loaded on demand
 group :sentry do
   gem "sentry-ruby", '~> 4.3.1',  require: false
-  gem "sentry-rails", '~> 4.3.3', require: false
+  gem "sentry-rails", "~> 4.4.0", require: false
   gem "sentry-delayed_job", '~> 4.3.0', require: false
 end
 
@@ -209,7 +209,7 @@ group :test do
   gem 'rack_session_access'
   gem 'rspec', '~> 3.10.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 5.0.0', group: :development
+  gem 'rspec-rails', '~> 5.0.2', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -221,10 +221,10 @@ group :test do
   # brings back testing for 'assigns' and 'assert_template' extracted in rails 5
   gem 'rails-controller-testing', '~> 1.0.2'
 
-  gem 'capybara', '~> 3.35.0'
-  gem 'capybara-screenshot', '~> 1.0.17'
+  gem 'capybara', '~> 3.36.0'
+  gem 'capybara-screenshot', '~> 1.0.26'
   gem 'selenium-webdriver', '~> 3.14'
-  gem 'webdrivers', '~> 4.6.0'
+  gem 'webdrivers', '~> 4.6.1'
 
   gem 'fuubar', '~> 2.5.0'
   gem 'timecop', '~> 0.9.0'
@@ -269,7 +269,7 @@ group :development, :test do
   # Require factory_bot for usage with openproject plugins testing
   gem 'factory_bot', '~> 6.1.0'
   # require factory_bot_rails for convenience in core development
-  gem 'factory_bot_rails', '~> 6.1.0'
+  gem 'factory_bot_rails', '~> 6.2.0'
 
   # Tracing and profiling gems
   gem 'flamegraph', require: false
